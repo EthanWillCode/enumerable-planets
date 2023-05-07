@@ -8,7 +8,17 @@
 
 </head>
 <body>
-<h1>Pick a planet:</h1>
+    <h1>Some planet info</h1>
+        <table class = "table table-dark ">
+            <tr>
+                <th scope="col">Planet Name</th>
+                <th scope="col">Number of Earth days in Year</th>
+            </tr>
+            <tr th:each="planet : ${planets}">
+                <td th:text = "${planet.name}"></td>
+                <td th:text = "${planet.yearLength} + ' Earth days in one year.'"></td>
+            </tr>
+        </table>
 
 </body>
 </html>
